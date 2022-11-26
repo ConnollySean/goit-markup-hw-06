@@ -76,7 +76,7 @@
                             <label for="name" class="modal-form-bar">
                                 <span>Name</span>
                                 <div class="modal-bar-container">
-                                    <input type="text" name="name" autofocus>
+                                    <input type="text" name="name" autofocus class="bar-input">
                                     <svg class="modal-form-icon" width="18" height="18">
                                         <use href="./images/svgimages/sprite.svg#icon-person"></use>
                                     </svg>
@@ -85,7 +85,7 @@
                             <label for="telephone" class="modal-form-bar">
                                 <span>Telephone</span>
                                 <div class="modal-bar-container">
-                                    <input type="tel" name="telephone">
+                                    <input type="tel" name="telephone" class="bar-input">
                                     <svg class="modal-form-icon" width="18" height="18">
                                         <use href="./images/svgimages/sprite.svg#icon-phone"></use>
                                     </svg>
@@ -94,7 +94,7 @@
                             <label for="email" class="modal-form-bar">
                                 <span>E-mail</span>
                                 <div class="modal-bar-container">
-                                    <input type="email" name="email">
+                                    <input type="email" name="email" class="bar-input">
                                     <svg class="modal-form-icon" width="18" height="18">
                                         <use href="./images/svgimages/sprite.svg#icon-email"></use>
                                     </svg>
@@ -104,11 +104,17 @@
                                 <span>Comments</span>
                                 <textarea name="comments" placeholder="Enter the text"></textarea>
                             </label>
-                            <label for="tos" class="modal-form-tos">
-                                <input type="checkbox" name="tos">
+                            <label class="modal-form-tos">
+                                <svg class="tos-unchecked-box" width="16" height="15">
+                                    <use href="./images/svgimages/sprite.svg#icon-checkbox"></use>
+                                </svg>
+                                <svg id="tos-checked-box" width="16" height="15">
+                                    <use href="./images/svgimages/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <input type="checkbox" name="tos" value="checked" id="tos-checkbox">
                                 <span>I agree with the newsletter and accept the Terms and Conditions</span>
                             </label>
-                            <button type="submit" "modal-form-button" class="modal-submit-button">Send</button>
+                            <button type="submit" class="modal-form-button" class="modal-submit-button">Send</button>
                         </form>
                     </div>
                 </div>
