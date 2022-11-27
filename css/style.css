@@ -208,8 +208,9 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
-    border: none;
+    border-color: var(--accent-color);;
     padding: 10px 20px;
+    border: none;
 }
 
 .hero-button:hover,
@@ -326,6 +327,7 @@ textarea {
     top: 50%;
     transform: translateY(-50%);
     left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .bar-input {
@@ -335,6 +337,7 @@ textarea {
     height: 40px;
     padding: 0 12px 0 42px;
     cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar-input:focus + .modal-form-icon {
@@ -348,6 +351,7 @@ textarea {
     border-radius: 4px;
     margin-bottom: 20px;
     cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar-input:focus,
@@ -361,18 +365,7 @@ textarea {
     letter-spacing: 0.01em;
 }
 
-.modal-form-tos {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24/14);
-    color: var(--secondary-text-color);
-    display: flex;
-    height: 24px;
-    position: relative;
-    cursor: pointer;
-}
-
-#tos-checkbox {
+.checkbox {
     cursor: pointer;
     margin-left: 12px;
     margin-right: 8px;
@@ -381,42 +374,44 @@ textarea {
     pointer-events: none;
 }
 
-.tos-unchecked-box {
-    position: absolute;
-    margin-left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+.modal-tos-label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24/14);
+    color: var(--secondary-text-color);
 }
 
-#tos-checked-box {
-    position: absolute;
+.tos-checkbox {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 8px;
+    margin-top: 5px;
     margin-left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tos-checked-box {
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#tos-checkbox:checked ~ span {
-    color: pink;
-}
-
-#tos-checkbox:checked ~ #tos-checked-box {
+.checkbox:checked + .modal-tos-label > span > .tos-checked-box {
     opacity: 1;
 }
 
-.modal-form-tos > span {
-    display: inline;
-    width: 400px;
-    margin-left: 35px;
-}
-
-.modal-form-tos:hover > span {
-    text-decoration: underline;
+.checkbox:checked + .modal-tos-label > .tos-checkbox{
+    background-color: var(--accent-color);
+    border: none;
 }
 
 .modal-form-button {
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30/16);
@@ -427,6 +422,8 @@ textarea {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     width: 200px;
     height: 50px;
+    border-radius: 4px;
+    border-color: var(--accent-color);
     align-self: center;
     cursor: pointer;
     border: none;
@@ -744,6 +741,72 @@ textarea {
     fill: currentColor;
 }
 
+.footer-subscribe-container {
+    margin-left: 93px;
+}
+
+.footer-subscribe-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    color: var(--secondary-title-color);
+}
+
+.footer-sub-form {
+    margin-top: 20px;
+}
+
+.email-sub-container {
+    display: flex;
+}
+
+.email-sub-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: inherit;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20/16);
+    padding-left: 16px;
+}
+
+.email-sub-button {
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position: relative;
+    border-color: var(--accent-color);
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: none;
+}
+
+.email-sub-button > span {
+    margin-left: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    color: var(--secondary-title-color);
+}
+
+.subscribe-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 28px;
+}
+
 /* Portfolio Page*/
 
 /* Our Portfolio */
@@ -788,6 +851,7 @@ textarea {
     background-color: var(--background-light-color);
     border-radius: 4px;
     padding: 6px 26px;
+    border-color: var(--background-light-color);
     border: none;
 }
 

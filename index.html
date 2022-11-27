@@ -104,17 +104,20 @@
                                 <span>Comments</span>
                                 <textarea name="comments" placeholder="Enter the text"></textarea>
                             </label>
-                            <label class="modal-form-tos">
-                                <svg class="tos-unchecked-box" width="16" height="15">
-                                    <use href="./images/svgimages/sprite.svg#icon-checkbox"></use>
-                                </svg>
-                                <svg id="tos-checked-box" width="16" height="15">
-                                    <use href="./images/svgimages/sprite.svg#icon-checkmark"></use>
-                                </svg>
-                                <input type="checkbox" name="tos" value="checked" id="tos-checkbox">
-                                <span>I agree with the newsletter and accept the Terms and Conditions</span>
-                            </label>
-                            <button type="submit" class="modal-form-button" class="modal-submit-button">Send</button>
+                            <input class="checkbox" type="checkbox" name="tos" value="agree" required id="tos-policy">                                                       
+                            <label class="modal-tos-label" for="tos-policy">
+                                <span class="tos-checkbox">
+                                    <svg class="tos-checked-box" width="15" height="15">
+                                        <use href="./images/svgimages/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span>
+                                    I agree with the newsletter and accept the
+                                    <a class="tac" href="#">
+                                        Terms and Conditions
+                                    </a>
+                            </label>  
+                            <button type="submit" class="modal-form-button">Send</button>
                         </form>
                     </div>
                 </div>
@@ -450,6 +453,20 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="footer-subscribe-container">
+                <h4 class="footer-subscribe-title">Subscribe to the newsletter</h4>
+                <form action="/" name="Subscription-email" class="footer-sub-form" autocomplete="on">
+                    <label for="subscription" class="email-sub-container">
+                        <input type="email" name="subscription" class="email-sub-input" placeholder="E-mail">
+                        <button type="submit" class="email-sub-button">
+                            <span>Subscribe</span>
+                            <svg class="subscribe-icon" width="24" height="24">
+                                <use href="./images/svgimages/sprite.svg#icon-paper-airplane"></use>
+                            </svg>
+                        </button>
+                    </label>
+                </form>
             </div>  
         </div>
     </footer>
